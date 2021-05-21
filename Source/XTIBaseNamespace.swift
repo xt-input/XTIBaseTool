@@ -1,6 +1,6 @@
 //
 //  XTIBaseNamespace.swift
-//  XTInputKit
+//  XTIBaseTool
 //
 //  Created by xt-input on 2017/3/30.
 //  Copyright © 2017年 tcoding.cn. All rights reserved.
@@ -22,7 +22,7 @@ public protocol XTITypeOriginalProtocol {
 public struct XTINamespaceOriginal<T>: XTITypeOriginalProtocol {
     public var originalValue: T
     public init(value: T) {
-        originalValue = value
+        self.originalValue = value
     }
 }
 
@@ -35,9 +35,3 @@ public extension XTIBaseNamespace {
         return XTINamespaceOriginal.self
     }
 }
-
-/// 请在这里添加所有的实现XTIBaseNamespace的类和结构体，避免出现重复
-extension CGRect: XTIBaseNamespace {}
-extension CGSize: XTIBaseNamespace {}
-extension CGFloat: XTIBaseNamespace {}
-extension Bool: XTIBaseNamespace {}
