@@ -8,7 +8,7 @@
 import UIKit
 
 public extension String {
-    public func xti_urlQueryEncoded() -> String {
+    func xti_urlQueryEncoded() -> String {
         let characters = CharacterSet.urlQueryAllowed.intersection(CharacterSet(charactersIn: "!$&'()*+,;=:#[]@"))
         let encodeUrlString = self.addingPercentEncoding(withAllowedCharacters: characters)
         return encodeUrlString ?? ""

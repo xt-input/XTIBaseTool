@@ -1,5 +1,5 @@
 //
-//  UIColor+.swift
+//  XTIUIColor+.swift
 //  XTIBaseTool
 //
 //  Created by xtinput on 2021/4/23.
@@ -8,14 +8,14 @@
 import UIKit
 
 public extension UIColor {
-    public var xti_isDynamic: Bool {
+    var xti_isDynamic: Bool {
         guard let cls = NSClassFromString("UIDynamicColor") else {
             return false
         }
         return self.isKind(of: cls)
     }
 
-    public convenience init(xti light: UIColor, dark: UIColor? = nil) {
+    convenience init(xti light: UIColor, dark: UIColor? = nil) {
         if #available(iOS 13.0, *) {
             self.init { trait in
                 if trait.userInterfaceStyle == .light {
@@ -29,7 +29,7 @@ public extension UIColor {
         }
     }
 
-    public convenience init(xti light: UInt64, dark: UInt64? = nil) {
+    convenience init(xti light: UInt64, dark: UInt64? = nil) {
         if #available(iOS 13.0, *) {
             self.init { trait in
                 if trait.userInterfaceStyle == .light {
@@ -43,7 +43,7 @@ public extension UIColor {
         }
     }
 
-    public convenience init(xti light: String, dark: String? = nil) {
+    convenience init(xti light: String, dark: String? = nil) {
         if #available(iOS 13.0, *) {
             self.init { trait in
                 if trait.userInterfaceStyle == .light {

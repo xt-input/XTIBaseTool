@@ -8,7 +8,7 @@
 import Foundation
 
 public extension Optional where Wrapped: Comparable {
-    public static func < (lhs: Wrapped?, rhs: Wrapped?) -> Bool {
+    static func < (lhs: Wrapped?, rhs: Wrapped?) -> Bool {
         if lhs == rhs {
             return false
         }
@@ -22,7 +22,7 @@ public extension Optional where Wrapped: Comparable {
         return lhs! < rhs!
     }
 
-    public static func > (lhs: Wrapped?, rhs: Wrapped?) -> Bool {
+    static func > (lhs: Wrapped?, rhs: Wrapped?) -> Bool {
         if lhs == rhs {
             return false
         }
@@ -31,11 +31,11 @@ public extension Optional where Wrapped: Comparable {
 }
 
 public extension Optional where Wrapped == String {
-    public var isEmpty: Bool {
+    var isEmpty: Bool {
         return self == nil || (self ?? "").isEmpty
     }
 
-    public var cuont: Int {
+    var cuont: Int {
         return (self ?? "").count
     }
 }

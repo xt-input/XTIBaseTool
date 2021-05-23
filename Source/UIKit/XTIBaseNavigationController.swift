@@ -26,6 +26,11 @@ open class XTIBaseNavigationController: UINavigationController {
     override open func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override open func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewController.hidesBottomBarWhenPushed = self.viewControllers.count >= 1
+        super.pushViewController(viewController, animated: animated)
+    }
 }
 
 extension XTIBaseNavigationController {

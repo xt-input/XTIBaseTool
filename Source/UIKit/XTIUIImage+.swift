@@ -1,5 +1,5 @@
 //
-//  UIImage+.swift
+//  XTIUIImage+.swift
 //  XTIBaseUIKit
 //
 //  Created by xtinput on 2021/5/11.
@@ -12,7 +12,7 @@ public extension UIImage {
     /// - Parameters:
     ///   - color: 图片颜色
     ///   - size: 图片大小
-    public convenience init(xti color: UIColor, size: CGSize = CGSize(width: 10, height: 10)) {
+    convenience init(xti color: UIColor, size: CGSize = CGSize(width: 10, height: 10)) {
         var rect = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()

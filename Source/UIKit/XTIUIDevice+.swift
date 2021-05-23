@@ -1,5 +1,5 @@
 //
-//  UIDevice+.swift
+//  XTIUIDevice+.swift
 //  XTIBaseTool
 //
 //  Created by xtinput on 2021/4/23.

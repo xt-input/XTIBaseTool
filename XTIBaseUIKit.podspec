@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Source/UIKit/*.swift'
+  s.dependency 'XTIBaseFoundation'
+  s.dependency 'XTILoger'
 
   s.swift_version = '5'
   s.requires_arc  = true

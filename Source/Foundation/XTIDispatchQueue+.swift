@@ -7,10 +7,10 @@
 
 import UIKit
 
-extension DispatchQueue {
+public extension DispatchQueue {
     fileprivate static var _onceToken = [String]()
 
-    public class func xti_once(token: String = "\(#file):\(#function):\(#line)", block: () -> Void) {
+    class func xti_once(token: String = "\(#file):\(#function):\(#line)", block: () -> Void) {
         objc_sync_enter(self)
         defer {
             objc_sync_exit(self)

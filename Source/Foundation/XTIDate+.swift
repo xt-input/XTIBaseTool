@@ -8,7 +8,7 @@
 import Foundation
 
 public extension DateFormatter {
-    public convenience init(xti format: String) {
+    convenience init(xti format: String) {
         self.init()
         self.dateFormat = format
     }
