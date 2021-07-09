@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name             = 'XTIBaseUIKit'
+  s.name             = 'XTIUIKit'
   s.version          = '1.0'
-  s.summary          = 'XTIBaseUIKit'
+  s.summary          = 'XTIUIKit'
 
   s.description      = <<-DESC
   TODO:
@@ -14,9 +14,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Source/BaseUIKit/*.swift'
-  s.dependency 'XTIBaseFoundation'
-  s.dependency 'XTILoger'
+  s.source_files = 'Source/UIKit/*.swift'
+  s.dependency 'XTIBaseUIKit'
 
   s.swift_version = '5'
   s.requires_arc  = true
