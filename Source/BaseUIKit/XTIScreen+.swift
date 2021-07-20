@@ -76,12 +76,12 @@ public extension CGSize {
 fileprivate var CGFloat_STATUS_HEIGHT: CGFloat?
 
 public extension CGFloat {
-    /// 屏幕宽度
+    /// 屏幕宽度，会根据横竖屏改变
     static var xti_screenWidth: CGFloat {
         return CGSize.xti_screenSize.width
     }
 
-    /// 屏幕高度
+    /// 屏幕高度，会根据横竖屏改变
     static var xti_screenHeight: CGFloat {
         return CGSize.xti_screenSize.height
     }
@@ -125,6 +125,6 @@ public extension CGFloat {
 
     /// 导航控制器安全高度
     static var xti_navbarHeight: CGFloat {
-        return Bool.xti_isAlienScreen ? 88.0 : 64.0
+        return self.xti_statusHeight + 44.0
     }
 }
